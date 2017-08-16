@@ -1,0 +1,26 @@
+/*
+.status{
+    position: fixed;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 2px;
+    padding: 10px 20px;
+    color: #fff;
+    opacity: 0;
+    transition: opacity .1s ease-in, transform .1s ease-in;
+    box-sizing: border-box;
+    overflow: hidden;
+    transform: translateX(105%);
+}
+.status_error,
+.status_success{
+    opacity: 1;
+    transform: translateX(0%);
+}
+.status_error{
+    background-color: rgba(255,0,0,.8);
+}
+.status_success{
+    background-color: rgba(0,255,0,.8);
+}
+*/

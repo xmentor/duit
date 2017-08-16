@@ -1,0 +1,25 @@
+.icon {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAAwCAYAAADab77TAAABH0lEQVR4nO3XQQrCMBBA0Z7EhbcQsxQ0PYQLbY/twnqQcSVIFM3UxDHjf9DtkMyn0HYdAKBVIrIQkZM8OovI8tP5YbNfhH44hX6U+2fdj+ewOXw8H088iZkld34aM/epeee/QuDfpN0zGlM0cK2394a3V4/AzhHYOQI7R2AntLuf1aD1wHOXVMs3zl51QarhHYHnKDmLwIVpz//qTiVmEbgw7flf3anErOYDe0Rg5wjsXOnAF0XfSTs/xOGSHTgO6vl4Q0RiZuRJRHba+et4iFmR4zCttkf1fAAt031B1Ge9D3esg6as9+GOddCU9T7csQ6ast4HAAAAgL9n/VuUst6HO9ZBU9b7cMc6aMp6H+5YB01Z7wMAAAAAAAAAgFquhoY0hikaNhUAAAAASUVORK5CYII=);
+    background-repeat: no-repeat;
+    display: block;
+    width: 24px;
+    height: 24px;
+}
+
+.icon-remove {
+    background-position: 0 0;
+}
+
+.icon-remove-task {
+    background-position: -24px 0;
+}
+
+.icon-menu {
+    width: 48px;
+    height: 48px;
+    background-position: -48px 0;
+}
+
+.icon-add {
+    background-position: -96px 0;
+}

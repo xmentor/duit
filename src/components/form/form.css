@@ -1,0 +1,87 @@
+.form{
+    border-bottom: 1px solid rgba(255,255,255,.5);
+}
+.form__row {
+    position: relative;
+}
+.form__label{
+    display: block;
+}
+.form__input {
+    width: 100%;
+    background: none;
+    border: 0;
+    border-left: 5px solid transparent;
+    border-bottom: 1px solid transparent;
+    padding: 15px 65px 15px 20px;
+    color: #66a2e2;
+    position: relative;
+    z-index: 2;
+/*
+    outline-width: 1px;
+    outline-style: solid;
+    outline-color: transparent;
+    outline-offset: -1px;
+*/
+}
+.form__input:hover,
+.form__input:focus {
+/*    outline-color: #294069;*/
+}
+.form__input::-webkit-input-placeholder {
+    color: #66a2e2;
+}
+.form__input::-moz-placeholder {
+    color: #66a2e2;
+}
+.form__input:-ms-input-placeholder {
+    color: #66a2e2;
+}
+.form__input:-moz-placeholder {
+    color: #66a2e2;
+}
+.form__input:placeholder-shown {
+    color: #66a2e2;
+}
+/*
+.form__input:-moz-submit-invalid {
+    box-shadow: none;
+    outline-color: #A60A2D;
+}
+.form__input:-moz-ui-invalid {
+    box-shadow: none;
+    outline-color: #A60A2D;
+}
+*/
+.form_task .form__input {
+    color: #444444;
+}
+.form_task .form__input::-webkit-input-placeholder {
+    color: #888888;
+}
+.form_task .form__input::-moz-placeholder {
+    color: #888888;
+}
+.form_task .form__input:-ms-input-placeholder {
+    color: #888888;
+}
+.form_task .form__input:-moz-placeholder {
+    color: #888888;
+}
+.form_task .form__input:placeholder-shown {
+    color: #888888;
+}
+.form__input[aria-invalid=true] {
+    border-left: 5px solid rgba(255,0,0,.6)
+}
+.form button {
+    height: 100%;
+    padding: 0 15px;
+    background-color: rgba(0,0,0,.1);
+    right: 0;
+    transition: background-color .1s ease-in;
+}
+.form button:hover,
+.form button:focus{
+    background-color: rgba(0,0,0,.3);
+}

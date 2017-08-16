@@ -1,0 +1,98 @@
+.header {
+    width: 25%;
+    height: 100vh;
+    overflow-y: auto;
+    background: #294069;
+    background: -moz-linear-gradient(top, #294069 2%, #294069 30%, #294069 60%, #3e4c66 100%);
+    background: -webkit-linear-gradient(top, #294069 2%,#294069 30%,#294069 60%,#3e4c66 100%);
+    background: linear-gradient(to bottom, #294069 2%,#294069 30%,#294069 60%,#3e4c66 100%);
+}
+@media (max-width: 768px) {
+    .header{
+        width: 35%;
+    }
+}
+@media (max-width: 640px) {
+    .header{
+        width: 100%;
+        height: auto;
+        max-height: 100vh;
+    }
+}
+.header__logo {
+    text-align: center;
+    margin: 0;
+    padding: 25px 0;
+}
+.header__logo a {
+    display: block;
+    text-decoration: none;
+    color: #fefefe;
+}
+.header__logo img {
+    width: 110px;
+    margin: 0 auto;
+}
+.header__toggler {
+    display: none;
+}
+@media (max-width: 640px) {
+    .header__top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 15px;
+        position: relative;
+    }
+    .header__toggler {
+        display: block;
+    }
+    .header__bottom {
+        display: none;
+    }
+    .header__bottom_open {
+        display: block;
+    }
+}
+.menu__lists {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: rgba(255,255,255,.5);
+}
+.menu__lists li {
+    border-top: 1px solid rgba(255,255,255,.5);
+    position: relative;
+}
+.menu__lists li:last-of-type{
+    border-bottom: 1px solid rgba(255,255,255,.5);
+}
+.menu__lists a {
+    color: inherit;
+    text-decoration: none;
+    padding: 15px 65px 15px 25px;
+    display: block;
+    word-wrap: break-word;
+    transition: color .1s ease-in;
+}
+.menu__lists a:hover,
+.menu__lists a:focus {
+    outline: 0;
+    color: rgba(255,255,255, 1);
+}
+.menu__lists a.active {
+    color: rgba(255,255,255, 1);
+}
+.menu__lists button {
+    padding: 5px;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    opacity: .5;
+    transition: opacity .1s ease-in, background-color .1s ease-in, border-color .1s ease-in;
+}
+.menu__lists button:hover,
+.menu__lists button:focus {
+    opacity: 1;
+    background-color: rgba(0, 0, 0,.1);
+    border-color: rgba(0, 0, 0,.2);
+}
