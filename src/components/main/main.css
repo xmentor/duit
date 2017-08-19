@@ -1,14 +1,17 @@
 .main{
     width: 75%;
+    margin-left: 25%;
 }
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .main{
-        width: 65%;
+        width: 70%;
+        margin-left: 30%;
     }
 }
 @media (max-width: 640px) {
     .main{
         width: 100%;
+        margin-left: 0;
         position: absolute;
         top: 101.75px;
         z-index: -1;
@@ -24,6 +27,7 @@
     padding: 15px;
     font-weight: 400;
     color: #222222;
+    word-wrap: break-word;
 }
 @media (max-width: 640px) {
     .list__name {
@@ -42,9 +46,20 @@
     margin: 10px 25px;
     transition: color .1s ease-in, border-color .1s ease-in;
 }
+@media (max-width: 640px) {
+    .list__task {
+        margin: 10px;
+    }
+}
 .list__task label{
-    padding: 15px 65px 15px 25px;
+    padding: 15px 45px 15px 25px;
     display: block;
+}
+@media (max-width: 640px) {
+    .list__task label{
+        padding: 10px 45px 10px 15px;
+        display: block;
+    }
 }
 .list__task_completed {
 /*
@@ -57,6 +72,7 @@
 }
 .task__name {
     margin-left: 25px;
+    word-wrap: break-word;
 }
 .list__tasks button {
     padding: 5px;

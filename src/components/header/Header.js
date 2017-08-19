@@ -24,9 +24,7 @@ const Header = (props) => {
                     labelHidden={true}
                     ariaLabel='Show all lists or add a new list'
                     ariaExpanded={props.expanded}
-                >
-                    <Icon name='menu' />
-                </Button>
+                />
             </div>
             <div className={`header__bottom ${props.expanded ? 'header__bottom_open' : ''}`}>
                 <Form 

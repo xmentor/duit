@@ -1,15 +1,17 @@
 .header {
+    position: fixed;
     width: 25%;
     height: 100vh;
-    overflow-y: auto;
+    overflow-y: hidden;
     background: #294069;
-    background: -moz-linear-gradient(top, #294069 2%, #294069 30%, #294069 60%, #3e4c66 100%);
-    background: -webkit-linear-gradient(top, #294069 2%,#294069 30%,#294069 60%,#3e4c66 100%);
     background: linear-gradient(to bottom, #294069 2%,#294069 30%,#294069 60%,#3e4c66 100%);
 }
-@media (max-width: 768px) {
+.header:hover{ 
+    overflow-y: auto;
+}
+@media (max-width: 800px) {
     .header{
-        width: 35%;
+        width: 30%;
     }
 }
 @media (max-width: 640px) {
@@ -17,12 +19,18 @@
         width: 100%;
         height: auto;
         max-height: 100vh;
+        position: relative;
     }
+}
+.header__top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .header__logo {
     text-align: center;
     margin: 0;
-    padding: 25px 0;
+    padding: 20px 0;
 }
 .header__logo a {
     display: block;
@@ -30,21 +38,92 @@
     color: #fefefe;
 }
 .header__logo img {
-    width: 110px;
     margin: 0 auto;
 }
-.header__toggler {
+.header__button {
     display: none;
+    width: 40px;
+    height: 30px;
+    border-top: 4px solid #ffffff;
+    right: 15px;
+    transition: border-color .1s ease-in-out;
 }
+.header__button:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-100%) rotate(0);
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+    transform-origin: top;
+    transition: transform .1s ease-in-out;
+}
+.header__button:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+    transform: rotate(0deg);
+    transition: transform .1s ease-in-out;transform-origin: left;
+}
+.header__button[aria-expanded=true] {
+    border-color: transparent;
+}
+.header__button[aria-expanded=true]:before {
+    transform: translate(-4px,-100%) rotate(45deg);
+}
+.header__button[aria-expanded=true]:after {
+    transform: rotate(-45deg);
+}
+/*
+.header__button .button__bar {
+    width: 40px;
+    height: 4px;
+    background-color: #ffffff;
+    display: block;
+    position: relative;
+    transition: background-color 1s ease-in-out, transform 1s ease-in-out;
+}
+.header__button .button__bar:before,
+.header__button .button__bar:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff;
+    transition: transform 1s ease-in-out;
+}
+.header__button .button__bar:before {
+    top: -11px;
+}
+.header__button .button__bar:after {
+    bottom: -11px;
+}
+.header__button[aria-expanded=true] .button__bar {
+    background-color: transparent;
+}
+.header__button[aria-expanded=true] .button__bar:before {
+    transform-origin: left;
+    transform: rotate(45deg);
+}
+.header__button[aria-expanded=true] .button__bar:after {
+    transform-origin: left;
+    transform: rotate(-45deg) translate(-4px, 100%);
+}
+*/
 @media (max-width: 640px) {
     .header__top{
-        display: flex;
         justify-content: space-between;
-        align-items: center;
         padding: 0 15px;
         position: relative;
     }
-    .header__toggler {
+    .header__button {
         display: block;
     }
     .header__bottom {
